@@ -1,155 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Survey form</title>
-<style>
-   h3{
-    margin-top: 2rem;
-    line-height: 1;
-   }
-   p{
-    line-height: 1;
-   }
-    input{
+    <style>
+      h3 {
+        margin-top: 2rem;
+        line-height: 1;
+        font-size: 1.3rem;
+      }
+      p {
+        line-height: 1;
+      }
+      input {
         padding: 3px 10px;
-        margin:3px 5px ;
-    }
-    label{
-      font-weight: bold;
-        font-family: Arial, Helvetica, sans-serif;  
-    }
-    
-    label #firstname, #lastname{
+        margin: 3px 5px;
+      }
+      label {
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      label #firstname,
+      #lastname {
         position: relative;
         top: -1.5rem;
         left: -2.2rem;
-        margin-bottom:10px;
-        
-    }
-    .asterix{
+        margin-bottom: 10px;
+      }
+      .asterix {
         color: red;
-    }
-    .manipulate{
+      }
+      .manipulate {
         position: relative;
         top: 1.5rem;
         left: 0.4rem;
         font-weight: normal;
-       
-    }
-    .email, #email{
+      }
+      .email,
+      #email {
         position: relative;
         top: 1.5rem;
-    }
+      }
 
-    table {
-            border-collapse: collapse;
-           
-        }
-          
-        th, td {
-            text-align: left;
-            padding: 8px;
-        }
-          
-        tr:nth-child(even) {
-            background-color: rgb(217, 218, 217);
-        }
-</style>
+      table {
+        border-collapse: collapse;
+      }
 
-</head>
-<body>
+      th,
+      td {
+        text-align: left;
+        padding: 8px;
+      }
+
+      tr:nth-child(even) {
+        background-color: rgb(217, 218, 217);
+      }
+    </style>
+  </head>
+  <body>
     <div class="container">
+      <form action="" target="_self">
+        <label for="name">Name <span class="asterix">*️</span></label
+        ><br />
+        <label for="name" class="manipulate"
+          >First<input type="text" required id="firstname"
+        /></label>
+        <label for="lastname" class="manipulate"
+          >Last<input type="text" id="lastname" required /></label
+        ><br />
+        <label for="email" class="email"
+          >Email<span class="asterix">*️</span></label
+        ><br />
+        <input type="email" id="email" required />
+        <h3>Your Experience.<span class="asterix">*️</span></h3>
+        <p class="star">⭐⭐⭐⭐⭐</p>
+        <p>Overall, how would you rate your experience with us?</p>
+        <h3>How satisfied are you with<span class="asterix">*️</span></h3>
+        <table class="table table1">
+          <tr>
+            <td></td>
+            <th>Very Unsatisfied</th>
+            <th>Unsatisfied</th>
+            <th>Neutral</th>
+            <th>Satisfied</th>
+            <th>Very Satisfied</th>
+          </tr>
 
-        <form action="" target="_self">
-            <label for="name">Name <span class="asterix">*️</span></label><br>
-            <label for="name" class="manipulate" >First<input type="text" required id="firstname" ></label>
-            <label for="lastname" class="manipulate">Last<input type="text" id="lastname" required></label><br>
-            <label for="email" class="email">Email<span class="asterix">*️</span></label><br>
-            <input type="email" id="email" required> 
-            <h3>Your Experience.<span class="asterix">*️</span></h3> 
-            <p class="star">⭐⭐⭐⭐⭐</p>
-            <p>Overall, how would you rate your experience with us?</p>
-            <h3>How satisfied are you with<span class="asterix">*️</span></h3>
-            <table  class="table table1">
-             
-                    <tr>
-                        <td></td>
-                        <th>Very Unsatisfied</th>
-                        <th>Unsatisfied</th>
-                        <th>Neutral</th>
-                        <th>Satisfied</th>
-                        <th>Very Satisfied</th>
-                    </tr>
-               
-                    <tr>
-                        <th>Purchase</th>
-                        <td> <input type="radio" name="purchae"></td>
-                        <td> <input type="radio" name="purchae"></td>
-                        <td> <input type="radio" name="purchae"></td>
-                        <td> <input type="radio" name="purchae"></td>
-                        <td> <input type="radio" name="purchae"></td>
-                    </tr>
-                    <tr>
-                        <th>Service</th>
-                        <td> <input type="radio" name="service"></td>
-                        <td> <input type="radio" name="service"></td>
-                        <td> <input type="radio" name="service"></td>
-                        <td> <input type="radio" name="service"></td>
-                        <td> <input type="radio" name="service"></td>
-                    </tr>
-                    <tr>
-                        <th>Company Overall</th>
-                        <td> <input type="radio" name="company Overall"></td>
-                        <td> <input type="radio" name="company Overall"></td>
-                        <td> <input type="radio" name="company Overall"></td>
-                        <td> <input type="radio" name="company Overall"></td>
-                        <td> <input type="radio" name="company Overall"></td>
-                    </tr>
-                    
-            </table>
-            <h3>How likely are you to <span class="asterix">*️</span></h3>
-            <table class="table table2">
-               
-                    <tr>
-                        <td></td>
-                       <th>Very Unlikely</th>
-                       <th>Unlikely</th>
-                       <th> Neutral</th>
-                       <th>Likely</th>
-                       <th>Very likely</th>
-                    </tr>
-                     <tr>
-                        <th>Buy from us again</th>
-                        <td> <input type="radio" name="Buy"></td>
-                        <td> <input type="radio" name="Buy"></td>
-                        <td> <input type="radio" name="Buy"></td>
-                        <td> <input type="radio" name="Buy"></td>
-                        <td> <input type="radio" name="Buy"></td>
-                    </tr>
-                    <tr>
-                        <th>Recommend our products to others</th>
-                        <td> <input type="radio" name="Recommend product"></td>
-                        <td> <input type="radio" name="Recommend product"></td>
-                        <td> <input type="radio" name="Recommend product"></td>
-                        <td> <input type="radio" name="Recommend product"></td>
-                        <td> <input type="radio" name="Recommend product"></td>
-                    </tr>
-                    <tr>
-                        <th>Recommend our company to others</th>
-                        <td> <input type="radio" name="Recommend company"></td>
-                        <td> <input type="radio" name="Recommend company"></td>
-                        <td> <input type="radio" name="Recommend company"></td>
-                        <td> <input type="radio" name="Recommend company"></td>
-                        <td> <input type="radio" name="Recommend company"></td>
-                    </tr>
-                </table>
-                <h3>Additional Comments or suggestions</h3>
-                <textarea name="suggestion" id="" cols="60" rows="6"></textarea><br>
-                <button class="btn">Submit</button>
-            </form>
+          <tr>
+            <th>Purchase</th>
+            <td><input type="radio" name="purchae" /></td>
+            <td><input type="radio" name="purchae" /></td>
+            <td><input type="radio" name="purchae" /></td>
+            <td><input type="radio" name="purchae" /></td>
+            <td><input type="radio" name="purchae" /></td>
+          </tr>
+          <tr>
+            <th>Service</th>
+            <td><input type="radio" name="service" /></td>
+            <td><input type="radio" name="service" /></td>
+            <td><input type="radio" name="service" /></td>
+            <td><input type="radio" name="service" /></td>
+            <td><input type="radio" name="service" /></td>
+          </tr>
+          <tr>
+            <th>Company Overall</th>
+            <td><input type="radio" name="company Overall" /></td>
+            <td><input type="radio" name="company Overall" /></td>
+            <td><input type="radio" name="company Overall" /></td>
+            <td><input type="radio" name="company Overall" /></td>
+            <td><input type="radio" name="company Overall" /></td>
+          </tr>
+        </table>
+        <h3>How likely are you to <span class="asterix">*️</span></h3>
+        <table class="table table2">
+          <tr>
+            <td></td>
+            <th>Very Unlikely</th>
+            <th>Unlikely</th>
+            <th>Neutral</th>
+            <th>Likely</th>
+            <th>Very likely</th>
+          </tr>
+          <tr>
+            <th>Buy from us again</th>
+            <td><input type="radio" name="Buy" /></td>
+            <td><input type="radio" name="Buy" /></td>
+            <td><input type="radio" name="Buy" /></td>
+            <td><input type="radio" name="Buy" /></td>
+            <td><input type="radio" name="Buy" /></td>
+          </tr>
+          <tr>
+            <th>Recommend our products to others</th>
+            <td><input type="radio" name="Recommend product" /></td>
+            <td><input type="radio" name="Recommend product" /></td>
+            <td><input type="radio" name="Recommend product" /></td>
+            <td><input type="radio" name="Recommend product" /></td>
+            <td><input type="radio" name="Recommend product" /></td>
+          </tr>
+          <tr>
+            <th>Recommend our company to others</th>
+            <td><input type="radio" name="Recommend company" /></td>
+            <td><input type="radio" name="Recommend company" /></td>
+            <td><input type="radio" name="Recommend company" /></td>
+            <td><input type="radio" name="Recommend company" /></td>
+            <td><input type="radio" name="Recommend company" /></td>
+          </tr>
+        </table>
+        <h3>Additional Comments or suggestions</h3>
+        <textarea name="suggestion" id="" cols="60" rows="6"></textarea><br />
+        <button class="btn">Submit</button>
+      </form>
     </div>
-</body>
+  </body>
 </html>
